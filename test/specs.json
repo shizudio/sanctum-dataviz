@@ -1,0 +1,1542 @@
+[
+ {
+  "template": "column",
+  "name": "Example · column",
+  "layout": "split",
+  "headline": "11 quarters of growth.",
+  "subtitle": "SOL staked through Sanctum has grown every quarter, making it #1 on Solana by TVL in August 2026.",
+  "highlight": "#1 on Solana by TVL",
+  "chartTitle": "SOL staked on Sanctum",
+  "unit": "Millions of SOL",
+  "data": [
+   {
+    "label": "Q4 2024",
+    "value": 7.3,
+    "group": "2024"
+   },
+   {
+    "label": "Q4 2025",
+    "value": 14.4,
+    "group": "2025 to 2026"
+   },
+   {
+    "label": "Q2 2026",
+    "value": 16.6,
+    "group": "2025 to 2026"
+   },
+   {
+    "label": "Aug 2026",
+    "value": 18.0,
+    "group": "2025 to 2026"
+   },
+   {
+    "label": "Sep 2026",
+    "value": 18.2,
+    "group": "2025 to 2026"
+   }
+  ],
+  "valueFormat": {
+   "suffix": "M",
+   "decimals": 1
+  },
+  "note": "Uneven periods: annual, then quarterly, then monthly.",
+  "source": "Sanctum quarterly reports · DefiLlama, Oct 2026",
+  "section": "Traction",
+  "page": "02"
+ },
+ {
+  "template": "column-stacked",
+  "name": "Example · column-stacked",
+  "headline": "Partner LSTs now earn 58% of fees.",
+  "chartTitle": "Protocol fees by source",
+  "unit": "Thousands of USD, illustrative",
+  "series": [
+   "Partner LSTs",
+   "Infinity",
+   "Router"
+  ],
+  "data": [
+   {
+    "label": "Q1",
+    "values": {
+     "Partner LSTs": 300,
+     "Infinity": 420,
+     "Router": 120
+    }
+   },
+   {
+    "label": "Q2",
+    "values": {
+     "Partner LSTs": 360,
+     "Infinity": 380,
+     "Router": 110
+    }
+   },
+   {
+    "label": "Q3",
+    "values": {
+     "Partner LSTs": 480,
+     "Infinity": 300,
+     "Router": 90
+    }
+   }
+  ],
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "bar",
+  "name": "Example · bar",
+  "headline": "Sanctum leads Solana LST TVL by 2x.",
+  "chartTitle": "LST TVL, Sep 2026",
+  "unit": "Millions of SOL, illustrative",
+  "data": [
+   {
+    "label": "Sanctum",
+    "value": 18.2
+   },
+   {
+    "label": "Jito",
+    "value": 9.1
+   },
+   {
+    "label": "Marinade",
+    "value": 6.4
+   },
+   {
+    "label": "Blaze",
+    "value": 2.2
+   }
+  ],
+  "valueFormat": {
+   "suffix": "M",
+   "decimals": 1
+  },
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "line",
+  "name": "Example · line",
+  "headline": "Infinity APY held above 6% all year.",
+  "chartTitle": "APY by month",
+  "unit": "Percent, illustrative",
+  "x": [
+   "Jan",
+   "Feb",
+   "Mar",
+   "Apr",
+   "May",
+   "Jun",
+   "Jul",
+   "Aug",
+   "Sep",
+   "Oct",
+   "Nov",
+   "Dec"
+  ],
+  "series": [
+   {
+    "name": "Infinity",
+    "role": "focus",
+    "values": [
+     6.4,
+     6.6,
+     6.5,
+     6.9,
+     7.1,
+     6.8,
+     6.7,
+     7.0,
+     7.2,
+     7.1,
+     7.3,
+     7.4
+    ]
+   },
+   {
+    "name": "Solana average",
+    "role": "context",
+    "values": [
+     5.9,
+     6.0,
+     5.8,
+     6.1,
+     6.2,
+     6.0,
+     5.9,
+     6.0,
+     6.1,
+     6.0,
+     6.1,
+     6.2
+    ]
+   }
+  ],
+  "projectionFrom": 9,
+  "reference": {
+   "value": 6,
+   "label": "6% target"
+  },
+  "valueFormat": {
+   "suffix": "%",
+   "decimals": 1
+  },
+  "note": "Oct to Dec projected. Illustrative numbers.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "area",
+  "name": "Example · area",
+  "headline": "TVL more than doubled in 2026.",
+  "chartTitle": "Total value locked",
+  "unit": "Millions of SOL, illustrative",
+  "x": [
+   "Jan",
+   "Feb",
+   "Mar",
+   "Apr",
+   "May",
+   "Jun",
+   "Jul",
+   "Aug",
+   "Sep"
+  ],
+  "series": [
+   {
+    "name": "TVL",
+    "role": "focus",
+    "values": [
+     8.1,
+     9.0,
+     10.4,
+     11.2,
+     13.0,
+     14.4,
+     16.1,
+     18.0,
+     18.2
+    ]
+   }
+  ],
+  "valueFormat": {
+   "suffix": "M",
+   "decimals": 1
+  },
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "panels",
+  "name": "Example · panels",
+  "headline": "Financial Results for Q3 2026",
+  "panels": [
+   {
+    "title": "Protocol Gross Profits (USD)",
+    "number": "$0.83M",
+    "delta": {
+     "value": "6.15% QoQ",
+     "direction": "down"
+    },
+    "comparison": "Q2 2026: $0.88M",
+    "palette": "blue",
+    "valueFormat": {
+     "prefix": "$",
+     "suffix": "M",
+     "decimals": 2
+    },
+    "data": [
+     {
+      "label": "Q1",
+      "value": 1.14,
+      "group": "2025"
+     },
+     {
+      "label": "Q2",
+      "value": 1.12,
+      "group": "2025"
+     },
+     {
+      "label": "Q3",
+      "value": 1.87,
+      "group": "2025"
+     },
+     {
+      "label": "Q4",
+      "value": 1.72,
+      "group": "2025"
+     },
+     {
+      "label": "Q1",
+      "value": 1.19,
+      "group": "2026"
+     },
+     {
+      "label": "Q2",
+      "value": 0.88,
+      "group": "2026"
+     },
+     {
+      "label": "Q3",
+      "value": 0.83,
+      "group": "2026"
+     }
+    ]
+   },
+   {
+    "title": "Protocol Gross Profits (SOL)",
+    "number": "9,446 SOL",
+    "delta": {
+     "value": "16.31% QoQ",
+     "direction": "down"
+    },
+    "comparison": "Q2 2026: 11,287 SOL",
+    "palette": "sol",
+    "data": [
+     {
+      "label": "Q1",
+      "value": 7113,
+      "group": "2025"
+     },
+     {
+      "label": "Q2",
+      "value": 7409,
+      "group": "2025"
+     },
+     {
+      "label": "Q3",
+      "value": 9149,
+      "group": "2025"
+     },
+     {
+      "label": "Q4",
+      "value": 9809,
+      "group": "2025"
+     },
+     {
+      "label": "Q1",
+      "value": 11408,
+      "group": "2026"
+     },
+     {
+      "label": "Q2",
+      "value": 11287,
+      "group": "2026"
+     },
+     {
+      "label": "Q3",
+      "value": 9446,
+      "group": "2026"
+     }
+    ]
+   }
+  ],
+  "note": "SOL gross profits fell 16% in Q3, mostly from one-time Partner LST withdrawal fees in Q2.",
+  "source": "Source: Sanctum",
+  "section": "Financial Results",
+  "page": "06"
+ },
+ {
+  "template": "share-bar",
+  "name": "Example · share-bar",
+  "headline": "Infinity earns 48% of partner revenue.",
+  "chartTitle": "Partner revenue by product, share of total",
+  "data": [
+   {
+    "label": "Infinity",
+    "value": 48
+   },
+   {
+    "label": "Router",
+    "value": 22
+   },
+   {
+    "label": "White-label LSTs",
+    "value": 16
+   },
+   {
+    "label": "Sanctum App",
+    "value": 9
+   },
+   {
+    "label": "Other",
+    "value": 5
+   }
+  ],
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "donut",
+  "name": "Example · donut",
+  "headline": "Infinity earns 48% of partner revenue.",
+  "chartTitle": "Partner revenue by product",
+  "centerValue": "$1.2M",
+  "centerLabel": "Q3 2026",
+  "data": [
+   {
+    "label": "Infinity",
+    "value": 48
+   },
+   {
+    "label": "Router",
+    "value": 22
+   },
+   {
+    "label": "White-label LSTs",
+    "value": 16
+   },
+   {
+    "label": "Sanctum App",
+    "value": 9
+   },
+   {
+    "label": "Other",
+    "value": 5
+   }
+  ],
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "table",
+  "name": "Example · table",
+  "headline": "Why teams build on Sanctum.",
+  "columns": [
+   "Evaluation criteria",
+   "Sanctum",
+   "Jito",
+   "Marinade",
+   "Blaze"
+  ],
+  "rows": [
+   [
+    "Shared LST liquidity",
+    "Infinity",
+    "",
+    "",
+    ""
+   ],
+   [
+    "White-label LSTs",
+    "Turnkey",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Instant unstake",
+    "Router",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Validator services",
+    "0% commission",
+    "",
+    "",
+    ""
+   ],
+   [
+    "Consumer app",
+    "Sanctum App",
+    "",
+    "",
+    ""
+   ]
+  ],
+  "highlightColumn": 1,
+  "note": "Competitor columns pending verification.",
+  "source": "sanctum.so docs, Oct 2026",
+  "section": "Comparison",
+  "page": "12"
+ },
+ {
+  "template": "heatmap",
+  "name": "Example · heatmap",
+  "headline": "Deposits peak 14:00 to 18:00 UTC on weekdays.",
+  "chartTitle": "Deposits by day and hour",
+  "unit": "Count, illustrative",
+  "rows": [
+   "Mon",
+   "Tue",
+   "Wed",
+   "Thu",
+   "Fri",
+   "Sat",
+   "Sun"
+  ],
+  "columns": [
+   "00",
+   "02",
+   "04",
+   "06",
+   "08",
+   "10",
+   "12",
+   "14",
+   "16",
+   "18",
+   "20",
+   "22"
+  ],
+  "values": [
+   [
+    12,
+    8,
+    5,
+    6,
+    14,
+    22,
+    30,
+    41,
+    44,
+    35,
+    24,
+    16
+   ],
+   [
+    11,
+    7,
+    6,
+    7,
+    15,
+    24,
+    31,
+    43,
+    46,
+    36,
+    25,
+    15
+   ],
+   [
+    13,
+    9,
+    5,
+    6,
+    13,
+    23,
+    29,
+    40,
+    45,
+    34,
+    23,
+    17
+   ],
+   [
+    12,
+    8,
+    6,
+    7,
+    16,
+    25,
+    33,
+    44,
+    47,
+    37,
+    26,
+    16
+   ],
+   [
+    14,
+    10,
+    7,
+    8,
+    15,
+    22,
+    30,
+    39,
+    42,
+    33,
+    27,
+    19
+   ],
+   [
+    9,
+    6,
+    4,
+    4,
+    8,
+    12,
+    18,
+    22,
+    24,
+    21,
+    17,
+    12
+   ],
+   [
+    8,
+    5,
+    4,
+    4,
+    7,
+    11,
+    16,
+    20,
+    22,
+    19,
+    15,
+    11
+   ]
+  ],
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "stats",
+  "name": "Example · stats",
+  "headline": "Solana's leading staking infrastructure.",
+  "stats": [
+   {
+    "number": "18.2M SOL",
+    "label": "Staked through Sanctum, Sep 2026"
+   },
+   {
+    "number": "#1",
+    "label": "On Solana by TVL, Aug 2026"
+   },
+   {
+    "number": "$0.83M",
+    "label": "Protocol gross profit, Q3 2026"
+   },
+   {
+    "number": "11",
+    "label": "Consecutive quarters of growth"
+   }
+  ],
+  "focus": 0,
+  "source": "Sanctum quarterly reports · DefiLlama, Oct 2026",
+  "section": "Overview",
+  "page": "03"
+ },
+ {
+  "template": "hero",
+  "name": "Example · hero",
+  "headline": "Sanctum is #1 on Solana by TVL.",
+  "number": "18.2M",
+  "caption": "SOL staked through Sanctum, Sep 2026",
+  "support": "Sanctum has grown every quarter for 11 quarters.",
+  "section": "Traction",
+  "page": "04"
+ },
+ {
+  "template": "progress",
+  "name": "Example · progress",
+  "headline": "2.72% of all SOL now runs through Sanctum.",
+  "subtitle": "Every SOL can be productive capital. Sanctum's share of circulating SOL keeps rising.",
+  "chartTitle": "Share of circulating SOL",
+  "items": [
+   {
+    "label": "Staked with Sanctum, Q2 2026",
+    "number": "2.72%",
+    "ratio": 0.0272
+   },
+   {
+    "label": "Liquid-staked on Solana",
+    "number": "12%",
+    "ratio": 0.12
+   }
+  ],
+  "note": "Second figure illustrative.",
+  "source": "Sanctum Q2 2026 report",
+  "section": "Market",
+  "page": "13"
+ },
+ {
+  "template": "waterfall",
+  "name": "Example · waterfall",
+  "headline": "Withdrawal fees explain most of Q3's dip.",
+  "chartTitle": "Gross profit, Q2 to Q3 2026",
+  "unit": "SOL, illustrative split",
+  "start": {
+   "label": "Q2",
+   "value": 11287
+  },
+  "steps": [
+   {
+    "label": "One-time fees",
+    "value": -1700
+   },
+   {
+    "label": "Lower APY",
+    "value": -420
+   },
+   {
+    "label": "New LSTs",
+    "value": 279
+   }
+  ],
+  "end": {
+   "label": "Q3"
+  },
+  "note": "Step sizes illustrative except one-time fees.",
+  "source": "Source: Sanctum",
+  "section": "Financial Results",
+  "page": "07"
+ },
+ {
+  "template": "scatter",
+  "name": "Example · scatter",
+  "headline": "Bigger LSTs earn more per SOL on Sanctum.",
+  "chartTitle": "LST size vs fee yield",
+  "xLabel": "TVL, millions of SOL",
+  "yLabel": "Fee yield, bps",
+  "points": [
+   {
+    "label": "Sanctum",
+    "x": 18.2,
+    "y": 42
+   },
+   {
+    "label": "A",
+    "x": 9.1,
+    "y": 35
+   },
+   {
+    "label": "B",
+    "x": 6.4,
+    "y": 31
+   },
+   {
+    "label": "C",
+    "x": 2.2,
+    "y": 18
+   },
+   {
+    "label": "D",
+    "x": 4.0,
+    "y": 26
+   },
+   {
+    "label": "E",
+    "x": 1.1,
+    "y": 12
+   }
+  ],
+  "focus": "Sanctum",
+  "note": "Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "dot-matrix",
+  "name": "Example · dot-matrix",
+  "headline": "120 of 200 partner validators are live.",
+  "chartTitle": "Partner validators",
+  "total": 200,
+  "counted": 120,
+  "pending": 18,
+  "labels": {
+   "counted": "Live",
+   "pending": "Onboarding",
+   "remainder": "In pipeline"
+  },
+  "note": "1 dot = 1 validator. Illustrative numbers.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "cloud-rings",
+  "name": "Example · cloud-rings",
+  "headline": "Every SOL can be productive capital.",
+  "subtitle": "Sanctum LSTs hold 19.6M SOL, 3.1% of all SOL.",
+  "highlight": "19.6M SOL",
+  "levels": [
+   {
+    "label": "Total SOL supply",
+    "value": "636.6M SOL"
+   },
+   {
+    "label": "Staked",
+    "value": "437M SOL",
+    "share": "68.7%"
+   },
+   {
+    "label": "Liquid staked",
+    "value": "52.1M SOL",
+    "share": "8.2%"
+   },
+   {
+    "label": "Sanctum LSTs",
+    "value": "19.6M SOL",
+    "share": "3.1%"
+   }
+  ],
+  "source": "Sanctum Q2 2026 report · DefiLlama",
+  "section": "Market",
+  "page": "13",
+  "legendTitle": "Where SOL sits",
+  "note": "Shares of total SOL supply, 29 Oct 2026 (epoch 1070). Diagram not to scale.",
+  "logo": "official",
+  "layout": "full"
+ },
+ {
+  "template": "flow",
+  "name": "Example · flow",
+  "headline": "Sanctum LSTs gained 9.6M SOL in 2025.",
+  "highlight": "9.6M SOL",
+  "chartTitle": "Liquid staking on Solana, cumulative net gain or loss",
+  "unit": "Millions of SOL, illustrative",
+  "x": [
+   "2025-01-01",
+   "2025-01-05",
+   "2025-01-09",
+   "2025-01-13",
+   "2025-01-17",
+   "2025-01-21",
+   "2025-01-25",
+   "2025-01-29",
+   "2025-02-02",
+   "2025-02-06",
+   "2025-02-10",
+   "2025-02-14",
+   "2025-02-18",
+   "2025-02-22",
+   "2025-02-26",
+   "2025-03-02",
+   "2025-03-06",
+   "2025-03-10",
+   "2025-03-14",
+   "2025-03-18",
+   "2025-03-22",
+   "2025-03-26",
+   "2025-03-30",
+   "2025-04-03",
+   "2025-04-07",
+   "2025-04-11",
+   "2025-04-15",
+   "2025-04-19",
+   "2025-04-23",
+   "2025-04-27",
+   "2025-05-01",
+   "2025-05-05",
+   "2025-05-09",
+   "2025-05-13",
+   "2025-05-17",
+   "2025-05-21",
+   "2025-05-25",
+   "2025-05-29",
+   "2025-06-02",
+   "2025-06-06",
+   "2025-06-10",
+   "2025-06-14",
+   "2025-06-18",
+   "2025-06-22",
+   "2025-06-26",
+   "2025-06-30",
+   "2025-07-04",
+   "2025-07-08",
+   "2025-07-12",
+   "2025-07-16",
+   "2025-07-20",
+   "2025-07-24",
+   "2025-07-28",
+   "2025-08-01",
+   "2025-08-05",
+   "2025-08-09",
+   "2025-08-13",
+   "2025-08-17",
+   "2025-08-21",
+   "2025-08-25",
+   "2025-08-29",
+   "2025-09-02",
+   "2025-09-06",
+   "2025-09-10",
+   "2025-09-14",
+   "2025-09-18",
+   "2025-09-22",
+   "2025-09-26",
+   "2025-09-30",
+   "2025-10-04",
+   "2025-10-08",
+   "2025-10-12",
+   "2025-10-16",
+   "2025-10-20",
+   "2025-10-24",
+   "2025-10-28",
+   "2025-11-01",
+   "2025-11-05",
+   "2025-11-09",
+   "2025-11-13",
+   "2025-11-17",
+   "2025-11-21",
+   "2025-11-25",
+   "2025-11-29",
+   "2025-12-03",
+   "2025-12-07",
+   "2025-12-11",
+   "2025-12-15",
+   "2025-12-19",
+   "2025-12-23",
+   "2025-12-27",
+   "2025-12-31"
+  ],
+  "series": [
+   {
+    "name": "Sanctum LSTs",
+    "values": [
+     0.0,
+     0.1,
+     0.1,
+     0.3,
+     0.5,
+     0.7,
+     0.7,
+     0.9,
+     0.7,
+     0.7,
+     0.7,
+     0.9,
+     0.9,
+     1.1,
+     1.2,
+     1.3,
+     1.6,
+     1.6,
+     2.0,
+     2.2,
+     2.3,
+     2.5,
+     2.4,
+     2.5,
+     2.2,
+     2.4,
+     2.5,
+     2.5,
+     2.6,
+     2.7,
+     2.9,
+     3.0,
+     3.2,
+     3.3,
+     3.4,
+     3.5,
+     3.6,
+     3.7,
+     3.5,
+     3.6,
+     3.5,
+     3.3,
+     3.3,
+     3.4,
+     3.6,
+     4.0,
+     4.1,
+     4.4,
+     4.6,
+     4.6,
+     4.7,
+     5.1,
+     5.3,
+     5.6,
+     5.8,
+     5.7,
+     5.8,
+     6.0,
+     6.0,
+     6.1,
+     6.0,
+     6.2,
+     6.2,
+     6.5,
+     6.8,
+     6.8,
+     6.9,
+     7.0,
+     7.2,
+     7.3,
+     7.4,
+     7.2,
+     7.2,
+     7.4,
+     7.5,
+     7.7,
+     7.7,
+     7.7,
+     7.9,
+     8.0,
+     8.1,
+     8.0,
+     7.9,
+     8.0,
+     8.8,
+     8.9,
+     8.9,
+     9.1,
+     9.3,
+     9.3,
+     9.4,
+     9.6
+    ],
+    "sanctum": true
+   },
+   {
+    "name": "JitoSOL",
+    "values": [
+     0.1,
+     0.2,
+     0.3,
+     0.4,
+     0.1,
+     0.2,
+     0.0,
+     0.2,
+     0.4,
+     0.8,
+     0.9,
+     1.2,
+     1.5,
+     1.5,
+     1.7,
+     1.8,
+     2.0,
+     2.0,
+     2.1,
+     2.3,
+     2.3,
+     2.2,
+     2.5,
+     2.5,
+     2.6,
+     2.9,
+     3.5,
+     3.6,
+     3.9,
+     4.1,
+     4.3,
+     4.5,
+     4.4,
+     4.3,
+     4.7,
+     5.1,
+     5.3,
+     5.2,
+     5.4,
+     5.5,
+     5.4,
+     5.4,
+     5.3,
+     5.1,
+     5.1,
+     4.9,
+     4.9,
+     4.7,
+     4.6,
+     4.3,
+     4.1,
+     3.8,
+     3.4,
+     3.0,
+     2.6,
+     2.4,
+     2.2,
+     2.0,
+     1.8,
+     1.5,
+     1.4,
+     1.2,
+     1.0,
+     0.9,
+     0.8,
+     0.7,
+     0.9,
+     0.6,
+     0.3,
+     -0.1,
+     -0.1,
+     -0.4,
+     -0.5,
+     -0.5,
+     -0.6,
+     -0.7,
+     -0.4,
+     -0.5,
+     -0.8,
+     -0.9,
+     -1.0,
+     -1.3,
+     -1.4,
+     -1.5,
+     -1.7,
+     -1.8,
+     -2.0,
+     -2.1,
+     -2.3,
+     -2.7,
+     -2.7,
+     -2.8
+    ],
+    "ticker": "JITO"
+   },
+   {
+    "name": "mSOL",
+    "values": [
+     -0.0,
+     -0.0,
+     -0.1,
+     -0.1,
+     -0.1,
+     -0.1,
+     -0.2,
+     -0.2,
+     -0.2,
+     -0.2,
+     -0.2,
+     -0.1,
+     -0.2,
+     -0.3,
+     -0.3,
+     -0.3,
+     -0.4,
+     -0.4,
+     -0.4,
+     -0.5,
+     -0.4,
+     -0.5,
+     -0.5,
+     -0.6,
+     -0.6,
+     -0.6,
+     -0.8,
+     -0.7,
+     -0.7,
+     -0.8,
+     -0.8,
+     -0.9,
+     -1.0,
+     -1.0,
+     -1.0,
+     -0.9,
+     -0.9,
+     -0.9,
+     -0.9,
+     -1.0,
+     -1.0,
+     -1.1,
+     -1.1,
+     -1.2,
+     -1.2,
+     -1.2,
+     -1.2,
+     -1.2,
+     -1.3,
+     -1.3,
+     -1.3,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.5,
+     -1.5,
+     -1.4,
+     -1.4,
+     -1.4,
+     -1.5,
+     -1.5,
+     -1.5,
+     -1.6,
+     -1.6,
+     -1.5,
+     -1.5,
+     -1.6,
+     -1.5,
+     -1.5,
+     -1.6,
+     -1.6,
+     -1.7,
+     -1.8,
+     -1.8,
+     -1.8,
+     -1.9,
+     -1.9,
+     -2.0,
+     -2.0,
+     -2.1,
+     -2.0,
+     -2.2,
+     -2.1,
+     -2.1,
+     -2.2,
+     -2.3,
+     -2.3,
+     -2.3
+    ],
+    "ticker": "mSOL"
+   }
+  ],
+  "valueFormat": {
+   "suffix": "M",
+   "decimals": 1
+  },
+  "note": "Daily net stake flows, summed from 1 Jan. Illustrative numbers for layout only.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "net-flow",
+  "name": "Example · net-flow",
+  "headline": "Net inflows in 9 of the last 12 weeks.",
+  "chartTitle": "Weekly net stake flow into Sanctum LSTs",
+  "unit": "Millions of SOL, illustrative",
+  "data": [
+   {
+    "label": "14 Jul",
+    "value": 0.42
+   },
+   {
+    "label": "21 Jul",
+    "value": 0.31
+   },
+   {
+    "label": "28 Jul",
+    "value": -0.18
+   },
+   {
+    "label": "4 Aug",
+    "value": 0.55
+   },
+   {
+    "label": "11 Aug",
+    "value": 0.12
+   },
+   {
+    "label": "18 Aug",
+    "value": -0.35
+   },
+   {
+    "label": "25 Aug",
+    "value": 0.28
+   },
+   {
+    "label": "1 Sep",
+    "value": 0.61
+   },
+   {
+    "label": "8 Sep",
+    "value": 0.09
+   },
+   {
+    "label": "15 Sep",
+    "value": -0.07
+   },
+   {
+    "label": "22 Sep",
+    "value": 0.44
+   },
+   {
+    "label": "29 Sep",
+    "value": 0.72
+   }
+  ],
+  "valueFormat": {
+   "suffix": "M",
+   "decimals": 2
+  },
+  "total": true,
+  "note": "Inflows minus unstakes, Monday to Sunday. Illustrative numbers.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "share-area",
+  "name": "Example · share-area",
+  "headline": "Sanctum's LST share rose from 22% to 41%.",
+  "highlight": "41%",
+  "chartTitle": "Share of Solana LST TVL",
+  "unit": "Monthly, illustrative",
+  "x": [
+   "2025-01-01",
+   "2025-02-01",
+   "2025-03-01",
+   "2025-04-01",
+   "2025-05-01",
+   "2025-06-01",
+   "2025-07-01",
+   "2025-08-01",
+   "2025-09-01",
+   "2025-10-01",
+   "2025-11-01",
+   "2025-12-01",
+   "2026-01-01",
+   "2026-02-01",
+   "2026-03-01",
+   "2026-04-01",
+   "2026-05-01",
+   "2026-06-01",
+   "2026-07-01",
+   "2026-08-01",
+   "2026-09-01"
+  ],
+  "series": [
+   {
+    "name": "Sanctum LSTs",
+    "sanctum": true,
+    "values": [
+     3.84,
+     4.45,
+     4.77,
+     5.34,
+     5.78,
+     5.86,
+     6.26,
+     7.18,
+     7.26,
+     7.67,
+     8.55,
+     8.66,
+     9.3,
+     9.51,
+     10.03,
+     10.17,
+     10.88,
+     11.45,
+     11.66,
+     12.22,
+     12.6
+    ]
+   },
+   {
+    "name": "JitoSOL",
+    "ticker": "JITO",
+    "values": [
+     7.24,
+     7.75,
+     7.75,
+     7.68,
+     7.62,
+     8.22,
+     8.08,
+     8.33,
+     8.53,
+     8.53,
+     8.75,
+     8.54,
+     8.88,
+     8.77,
+     9.16,
+     9.23,
+     8.86,
+     8.98,
+     9.13,
+     9.68,
+     9.46
+    ]
+   },
+   {
+    "name": "mSOL",
+    "ticker": "mSOL",
+    "values": [
+     4.58,
+     4.31,
+     4.35,
+     4.21,
+     4.11,
+     4.18,
+     4.1,
+     4.22,
+     4.01,
+     4.08,
+     3.96,
+     3.97,
+     3.7,
+     3.32,
+     3.67,
+     3.65,
+     3.54,
+     3.27,
+     3.28,
+     2.9,
+     3.2
+    ]
+   },
+   {
+    "name": "Others",
+    "colour": "color/neutral/cool-grey",
+    "ticker": "etc",
+    "values": [
+     2.24,
+     2.24,
+     2.27,
+     2.91,
+     3.15,
+     2.78,
+     3.37,
+     3.3,
+     3.31,
+     3.56,
+     4.01,
+     4.24,
+     3.91,
+     4.41,
+     4.24,
+     4.81,
+     4.74,
+     5.23,
+     5.46,
+     5.34,
+     5.8
+    ]
+   }
+  ],
+  "note": "Share of SOL held in liquid staking tokens. Illustrative numbers.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ },
+ {
+  "template": "ticker",
+  "name": "Example · ticker",
+  "headline": "INF pays 7.4%, the top LST yield on Solana.",
+  "highlight": "7.4%",
+  "tokens": [
+   {
+    "name": "Infinity",
+    "ticker": "INF",
+    "sanctum": true,
+    "value": "7.42%",
+    "label": "30-day APY",
+    "change": "0.31% MoM",
+    "direction": "up",
+    "spark": [
+     7.0,
+     7.006,
+     7.043,
+     7.046,
+     7.052,
+     7.087,
+     7.16,
+     7.148,
+     7.141,
+     7.272,
+     7.319,
+     7.275,
+     7.429,
+     7.491,
+     7.471,
+     7.416,
+     7.449,
+     7.414,
+     7.366,
+     7.303,
+     7.288,
+     7.369,
+     7.358,
+     7.286,
+     7.341,
+     7.36,
+     7.426,
+     7.513,
+     7.518,
+     7.524
+    ]
+   },
+   {
+    "name": "Jito Staked SOL",
+    "ticker": "JitoSOL",
+    "value": "6.91%",
+    "label": "30-day APY",
+    "change": "0.12% MoM",
+    "direction": "down",
+    "spark": [
+     7.0,
+     6.993,
+     6.931,
+     6.959,
+     7.023,
+     7.027,
+     7.01,
+     6.992,
+     6.948,
+     6.903,
+     6.878,
+     6.831,
+     6.804,
+     6.72,
+     6.733,
+     6.73,
+     6.667,
+     6.547,
+     6.542,
+     6.592,
+     6.55,
+     6.521,
+     6.488,
+     6.516,
+     6.465,
+     6.509,
+     6.489,
+     6.53,
+     6.527,
+     6.51
+    ]
+   },
+   {
+    "name": "Marinade SOL",
+    "ticker": "mSOL",
+    "value": "6.64%",
+    "label": "30-day APY",
+    "change": "0.00% MoM",
+    "direction": "flat",
+    "spark": [
+     6.6,
+     6.541,
+     6.514,
+     6.504,
+     6.53,
+     6.54,
+     6.512,
+     6.528,
+     6.567,
+     6.561,
+     6.543,
+     6.527,
+     6.559,
+     6.581,
+     6.544,
+     6.559,
+     6.54,
+     6.51,
+     6.56,
+     6.593,
+     6.564,
+     6.567,
+     6.587,
+     6.561,
+     6.556,
+     6.583,
+     6.511,
+     6.524,
+     6.554,
+     6.574
+    ]
+   }
+  ],
+  "note": "APY from on-chain exchange rate, 30-day trailing. Illustrative numbers.",
+  "source": "Sample data",
+  "section": "Template",
+  "page": "00"
+ }
+]
