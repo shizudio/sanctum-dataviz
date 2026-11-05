@@ -9,7 +9,7 @@ Turn numbers into a Sanctum data slide that follows the brand system every time.
 
 Consistency comes from the files in this skill, not from memory: the builders in `scripts/` encode the grid, type, colours and lines, so write the spec and let them draw.
 
-Colour direction in one line: black headings and light hairlines carry the page, charts and shapes stay blue, pale sky is for table header bands, and on A4 collateral lilac is the accent (pale lilac for a highlighted table column, deep lilac for numerals and dates). Colour hierarchy is blue, then lilac, then gold; gold is held back as the third colour for when a piece needs one. Data slides carry a small sky and lilac bar above the headline; A4 collateral has no bar. Full rules are in `references/rules.md`.
+Colour direction in one line: black headings and light hairlines carry the page, charts and shapes stay blue, pale sky is for table header bands, and on A4 collateral lilac is the accent (pale lilac for a highlighted table column, deep lilac for numerals and dates). Colour hierarchy is blue, then lilac, then gold; gold is held back as the third colour for when a piece needs one. No bar or hairline above the headline on any slide or page. Full rules are in `references/rules.md`.
 
 ## Files
 - `references/templates.md`: the 20 templates, when each fits, the data each needs, and the recommendation table. Read it on every request.
@@ -64,6 +64,9 @@ Write it into the spec as `"emphasis": {"targets": ["Q2 2026"], "by": ["colour",
 Also settle `layout` when it matters: `split` (text left, graphic on the right half) or `full` (graphic across the slide). Each template has a default; only ask if the content clearly fits either.
 
 If the person gives a CSV or an export link they downloaded, run `python3 scripts/csv_to_series.py <file> ...` (see the Crypto templates section of `references/templates.md`) and paste its output into the spec rather than typing numbers.
+
+### 2c. Comparisons need logos
+When a slide compares projects (Sanctum against Jito, Marinade, Jupiter and so on), find and add each project's real logo. Check `LOGOS` in `scripts/core.js` and the Project logos section of `references/figma.md` first; if a logo is missing, find one (browser pane, project site, or ask the person once) and add it. Give each project its own colour: Sanctum sky, then lilac, then gold. Never leave competitors grey and never leave a ticker placeholder without saying so.
 
 ### 3. Write and check the spec
 Write the spec as JSON to a working folder (for example `<scratchpad>/charts/<slug>/spec.json`), using the fields in `references/templates.md`. Headline rules from `references/rules.md`: state the finding with its number, under 60 characters, no em dashes. Use `highlight` for the one phrase that should turn blue.

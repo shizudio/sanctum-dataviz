@@ -50,3 +50,15 @@ A colour variable was renamed. The builder needs these names in the "Sanctum" co
 
 ## Previews
 Figma's screenshot links cannot be downloaded from Claude's workspace, and `use_figma` caps return values at 48 KB, so the builder calls `frame.screenshot({scale: 0.5})` at the end. The image arrives with the tool result and is saved as a file (path shown as `[Image: source: ...]`), which is what gets sent in the chat. Set `previewScale` in the spec to change the size, or `noPreview: true` to skip it.
+
+
+## Project logos
+Real logos for comparison slides live as square frames on the **Data viz** page and are listed in `LOGOS` in `scripts/core.js` (keys are lower case names or tickers).
+
+| Project | Frame | Source |
+| --- | --- | --- |
+| Jito (JitoSOL) | `2080:7638` | DefiLlama icon server, found 5 Nov 2026 |
+| Marinade (mSOL) | `2082:7638` | Supplied by Shina, traced to vector |
+| Sanctum | Albus app mark component `257:7075` | Style Guide page |
+
+Adding one: find the logo (ask for it if you cannot), put it in Figma as a square frame, and add its key and node id to `LOGOS`. The shell cannot reach figma.com or mcp.figma.com. Two ways in: (1) open the image in the browser pane (for example `icons.llama.fi/<protocol>.png`, ask for access each load), draw it to a canvas, and POST it as multipart form data with `mode: 'no-cors'` to a `submitUrl` from `upload_assets`; it lands as an image frame on the page. (2) Trace a supplied image with `vtracer` (binary mode on a mask, then fill) and create it with `figma.createNodeFromSvg`. Name the frame `Logo · <project>`.

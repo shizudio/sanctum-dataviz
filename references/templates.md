@@ -51,7 +51,8 @@ Pie or donut is never the default recommendation: a `share-bar` is easier to rea
 ### `line` · Line chart
 - **Answers**: trend over many points; comparing 2 to 3 series over time.
 - **Data**: `x: ["Jan",...]`, `series: [{name, values: [...], role: "focus"|"context"}]`, 1 to 3 series, 4 to 36 points. Optional `projectionFrom` (index where values become forecast, drawn dashed). Optional `reference: {value, label}` (target line).
-- **Colour**: focus 4px Sanctum sky, context 2px mid grey. Labels at the line ends, no legend. Light y axis (4 steps) because values are not printed on every point.
+- **Axis**: starts at zero by default. When the lines sit close together at a high level (APY 4.7% to 6.2%), set `yMin`, `yMax`, `yStep` to cut the axis, and say so at the start of `note` ("Axis starts at 4%"). Lines only, never bars.
+- **Colour**: focus 4px Sanctum sky; each other project gets its own colour in hierarchy order (lilac, gold, green, coral) at 3px, never grey. With 2 or more series, each line ends in the project's logo (48px chip) with its value and name beside it. No legend. Sanctum gets the Albus mark; others get their logo from the `LOGOS` registry in `core.js` or from a per-series `logoNode` (a Figma node id). If no logo is found the build warns and draws a ticker placeholder. Light y axis (4 steps) because values are not printed on every point.
 
 ### `area` · Area chart
 - Same data as `line` with one series. Filled with powder blue under a 4px blue line. Use when the volume under the line is the point (TVL).
@@ -114,7 +115,7 @@ Pie or donut is never the default recommendation: a `share-bar` is easier to rea
 
 These follow the reference "Liquid Staking Market on Solana" chart: dense daily data, a zero line, translucent fills, and token badges at the line ends instead of a legend.
 
-**Token badges.** Sanctum always gets the Albus app mark (squircle, sky) with no outline. Every other token gets a pale squircle in its series colour, no outline, and its ticker in black, named "Badge · <ticker> (drop logo here)" so a designer can paste the real logo in Figma. Never draw a competitor's logo. Mark the Sanctum series with `"sanctum": true`; give others a short `ticker` (4 characters fits best).
+**Token badges.** Sanctum always gets the Albus app mark (squircle, sky) with no outline. Every other project gets its real logo in a squircle chip, no outline (see "Project logos in comparisons" in `rules.md`). Only when no logo can be found does it fall back to a pale squircle with the ticker, named "Badge · <ticker> (drop logo here)". Mark the Sanctum series with `"sanctum": true`; give others a short `ticker` (4 characters fits best).
 
 **Series colours.** Sanctum sky for Sanctum, then lilac, gold, green, coral in order (blue, lilac, gold is the colour hierarchy). Never a competitor's own brand colour. Use `"colour": "color/neutral/cool-grey"` for an "Others" group.
 
@@ -147,7 +148,7 @@ These follow the reference "Liquid Staking Market on Solana" chart: dense daily 
 | `name` | yes | Frame name in Figma |
 | `headline` | yes | The finding, with its number. Max 60 characters |
 | `highlight` | no | A phrase inside the headline or subtitle to colour blue. It is the slide's one blue mark; headlines are otherwise black |
-| `accentBar` | no | The sky and lilac bar above the headline is drawn by default; `false` removes it |
+| `accentBar` | no | Off by default. Never set it to true: the sky and lilac bar was removed from the system |
 | `subtitle` | no | Supporting statement, grey |
 | `chartTitle`, `unit` | for charts | Title in blue over a block rule, unit in grey |
 | `layout` | no | `"split"` (text left, graphic columns 7 to 12) or `"full"` (graphic across 12 columns). Each template has a sensible default |

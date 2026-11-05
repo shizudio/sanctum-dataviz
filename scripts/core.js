@@ -12,12 +12,15 @@ const SOL = ['color/sol/1','color/sol/2','color/sol/3','color/sol/4'];
 const CAT = [SANCTUM,'color/accent/lilac/4','color/accent/yellow/4','color/accent/green/4','color/accent/coral/3'];
 const CAT_TEXT = ['color/text/highlight','color/text/accent-lilac','color/text/accent-yellow','color/text/accent-green','color/text/strong'];
 const OTHER = 'color/neutral/cool-grey';
+// Project logos kept as square frames on the Data viz page (Nov 2026). Add new ones here with the frame id. Keys are lower case names or tickers.
+const LOGOS = {jito:'2080:7638', jitosol:'2080:7638', jto:'2080:7638', marinade:'2082:7638', msol:'2082:7638', mnde:'2082:7638'};
 // Accessibility: pale tones are for fills only. Lines, outlines, small marks and badge edges use the deep partner,
 // which clears 3:1 on white (WCAG 1.4.11). Text uses CAT_TEXT (4.3:1 or more, all text here is 24px or larger).
 const MARK = {'color/brand/blue':SANCTUM, 'color/brand/sky':SANCTUM, 'color/brand/azure':SANCTUM, 'color/brand/powder':SANCTUM,
   'color/accent/lilac/4':'color/text/accent-lilac', 'color/accent/green/4':'color/text/accent-green', 'color/accent/yellow/4':'color/text/accent-yellow',
   'color/accent/coral/2':'color/accent/coral/4', 'color/accent/coral/3':'color/accent/coral/4', 'color/neutral/cool-grey':'color/neutral/grey'};
 const mark = c => MARK[c] || c;
+const textFor = c => { const i = CAT.indexOf(c); return i>=0 ? CAT_TEXT[i] : 'color/text/secondary'; };
 const COLW = (1760 - 11*32) / 12;
 const col = i => 80 + (i-1)*(COLW+32);          // x of column i (1..12)
 const span = n => n*COLW + (n-1)*32;             // width of n columns
@@ -35,6 +38,8 @@ async function setup(){
   let page = figma.root.children.find(p=>p.name===OUT_PAGE);
   if (!page){ page = figma.createPage(); page.name = OUT_PAGE; }
   await figma.setCurrentPageAsync(page); S.page = page;
+  S.LOGO = {}; S.LOGOID = {};
+  for (const [k,id] of Object.entries(LOGOS)){ const n = await figma.getNodeByIdAsync(id); if (n) S.LOGO[k] = n; }
   S.C = {};
   for (const [k,id] of Object.entries(IDS)){ const n = await figma.getNodeByIdAsync(id); if(!n) throw new Error('Component missing: '+k+' ('+id+'). Update IDS in core.js from references/figma.md'); S.C[k]=n; }
 }
@@ -153,6 +158,11 @@ function badge(x, y, size, o={}){
   const f = figma.createFrame(); S.slide.appendChild(f); f.resize(size, size); f.x = x; f.y = y; f.cornerRadius = size*0.28; f.cornerSmoothing = 0.6; f.clipsContent = true;
   // No outline on logos or badges (brand decision). The black ticker and the name beside the badge carry identity.
   if (o.sanctum){ const i = variant(S.C.appmark, 'Shape=Squircle, Fill=Blue').createInstance(); f.appendChild(i); i.rescale(size/i.width); i.x = 0; i.y = 0; f.fills = []; f.name = 'Badge · Sanctum'; if (o.key!=null) tag(f, o.key, 'badge'); return f; }
+  // Real project logo first (spec logoNode, else the LOGOS registry by name or ticker), a ticker placeholder only when none is found.
+  const names = [o.text].concat(Array.isArray(o.key) ? o.key : [o.key]).filter(Boolean).map(v=>String(v).toLowerCase());
+  const src = (o.logoNode && S.LOGOID[o.logoNode]) || names.map(v=>S.LOGO[v]).find(Boolean);
+  if (src){ f.fills = []; const c = src.clone(); f.appendChild(c); c.rescale(size/c.width); c.x = 0; c.y = 0; f.name = 'Logo · '+(o.text||'project'); if (o.key!=null) tag(f, o.key, 'badge'); return f; }
+  S.warnings.push('No logo found for "'+(o.text||'?')+'". Find one and add it to LOGOS in core.js (see references/rules.md).');
   f.fills = [P(o.colour || OTHER)]; f.name = 'Badge · '+(o.text||'token')+' (drop logo here)'; if (o.key!=null) tag(f, o.key, 'badge');
   // Black on every pale accent: 6:1 to 13:1. White on these fills would be 2:1.
   const t = T((o.text||'?').slice(0,4), 20, 'SemiBold', 'color/text/strong', {parent: f});
@@ -247,6 +257,7 @@ async function run(spec, tpl){
   if (!TPL) throw new Error('No template loaded');
   if (!S.ready){ await setup(); S.ready = true; }
   S.warnings = [];
+  for (const m of JSON.stringify(spec).matchAll(/"logoNode":"([^"]+)"/g)){ if (!S.LOGOID[m[1]]){ const n = await figma.getNodeByIdAsync(m[1]); if (n) S.LOGOID[m[1]] = n; } }
   const prev = spec.replace ? await figma.getNodeByIdAsync(spec.replace) : null;
   const f = figma.createFrame(); f.name = spec.name || ('Chart · '+spec.template); f.resize(1920,1080); f.fills=[P('color/neutral/white')]; f.clipsContent = true;
   S.page.appendChild(f); S.slide = f;
@@ -263,8 +274,8 @@ async function run(spec, tpl){
     const ls = 56 / 234.244; lg.rescale(ls); lg.x = 80 - 127.955*ls; lg.y = 70 - 94.41*ls; lg.name = 'Sanctum logo · official';
   }
   const layout = spec.layout || (TPL.defaultLayout || 'full');
-  // accent bar: sky and lilac, 48 x 6 each, between the logo and the headline (spec.accentBar:false removes it)
-  if (spec.accentBar !== false){ R(80, 150, 48, 6, 'color/brand/sky', {name:'Accent bar · sky'}); R(128, 150, 48, 6, 'color/accent/lilac/4', {name:'Accent bar · lilac'}); }
+  // accent bar: off by default (Shina, 5 Nov 2026: never add the sky and lilac hairline). Only drawn when spec.accentBar === true.
+  if (spec.accentBar === true){ R(80, 150, 48, 6, 'color/brand/sky', {name:'Accent bar · sky'}); R(128, 150, 48, 6, 'color/accent/lilac/4', {name:'Accent bar · lilac'}); }
   // headline: black. The highlight phrase, if it sits in the headline, is the one blue mark of the slide.
   const hl = T(spec.headline, 64, 'Medium', 'color/text/strong', {x:80, y:190, w: span(layout==='split'?6:(spec.headlineSpan||10)), name:'Headline'});
   if (spec.highlight && spec.headline.includes(spec.highlight)){ const i = spec.headline.indexOf(spec.highlight); hl.setRangeFills(i, i+spec.highlight.length, [P('color/text/highlight')]); }

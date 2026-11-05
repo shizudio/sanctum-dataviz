@@ -76,7 +76,7 @@ Why: pages with blue headings, blue bands and blue cards read as a generic blue 
 
 - Blue is for data and shapes, lilac is for marking and emphasis in tables and numbering. Neither is used for headings or paragraphs.
 - Colour hierarchy (set 5 Nov 2026): blue first, lilac second, gold third. Reach for the next colour only when the one before it is already in use on the page.
-- Signature mark: a two-tone bar, sky then lilac (`lilac/4`), above the headline on 1920 × 1080 slides (48 + 48 × 6px). Not used on A4 collateral.
+- No signature bar. The sky and lilac bar above the headline was removed on 5 Nov 2026 and is never added to anything. It exists only behind `accentBar: true`, which nobody should set.
 - Deep lilac sits close to the wordmark blue at small sizes. If it needs to read more clearly as purple, use a more violet shade, but keep it one colour across the piece.
 - Bright gold fails contrast as text. Gold text is always #A36F00.
 - Avoid the generic fintech look: blue headlines, full-bleed blue closing bands, tinted rounded cards, pill buttons.
@@ -85,7 +85,7 @@ Why: pages with blue headings, blue bands and blue cards read as a generic blue 
 - A full-bleed blue is for covers only (sky gradient with Albus, white type), as in the Sanctum Quarterly.
 
 ## Honesty
-- Bars start at zero. No cut axes.
+- Bars start at zero. No cut axes. The one exception is a line chart whose series sit close together at a high level: it may use `yMin`, and the method note then says where the axis starts.
 - Uneven periods are labelled as uneven in the note.
 - Pending data is drawn as pending, never guessed.
 - No placeholders ("XX%", "TBD") in a finished chart.
@@ -96,7 +96,7 @@ Why: pages with blue headings, blue bands and blue cards read as a generic blue 
 ## Crypto data
 - Signed data always shows a zero line (2px grey). Gains above, losses below; never hide the negative side by starting the axis at zero.
 - Outflows and losses use coral tints, the one meaning coral carries. Inflows use the blue ramp.
-- Sanctum is always Sanctum blue with the Albus badge. Other protocols take accent colours in order, never their own brand colours, and never their logos drawn by us: their badge is a ticker placeholder for a designer to fill.
+- Sanctum is always Sanctum blue with the Albus badge. Other protocols take accent colours in order (lilac, gold, green, coral), never grey and never their own brand colours. Their real logos sit on their badges (see "Project logos in comparisons").
 - Dense series (daily data) carry no point markers and no per-point values; the end value beside the badge is the number that matters.
 - Say how a flow is counted in the method note (daily net, summed from a date; Monday to Sunday weeks; trailing 30-day APY).
 
@@ -132,6 +132,12 @@ Three levers, used alone or together, always on one or two targets:
 - Nested diagrams keep their words outside the shapes: a legend table beside them, joined by 2px leader lines in each ring's colour.
 - Sky is 1.9:1 on white, below the 3:1 mark guideline. This is a deliberate brand choice; keep Sanctum lines at 4px, always label the end value, and print values on bars so the colour is never the only carrier.
 
+
+## Project logos in comparisons (set 5 Nov 2026)
+- When a slide compares projects (Sanctum against Jito, Marinade and so on), every project carries its real logo, found and added by Claude. Never leave a ticker placeholder unless no logo can be found, and then say so.
+- Sanctum uses the Albus app mark. Other projects use their own logo in a 48px squircle chip, no outline, at the end of their line or bar.
+- Each project gets its own colour in hierarchy order: Sanctum sky, then lilac, then gold, then green, then coral. Do not draw competitors in grey.
+- Logos are kept as square frames on the Data viz page (Jito `2080:7638`, Marinade `2082:7638`); clone them rather than re-uploading. To add a new one: get the image through the browser pane (icons.llama.fi/<protocol>.png or the project's own site), POST it as multipart form data to the `submitUrl` from `upload_assets` (the shell cannot reach mcp.figma.com), or trace a user-supplied image to SVG with vtracer and use `figma.createNodeFromSvg`.
 
 ## Logo
 Two corner logos, and the person always chooses which:
