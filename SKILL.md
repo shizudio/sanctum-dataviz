@@ -23,6 +23,18 @@ Colour direction in one line: black headings and light hairlines carry the page,
 
 ## Workflow
 
+### 0. Ask before you build (every time, no exceptions)
+Every request gets questions before anything is built, however small or urgent it sounds and even if the person already gave some answers. Send them in one `AskUserQuestion` call (up to four questions, so split into two calls if you need more). Pre-fill your recommendation from what the person already said, put it first, and mark it "(Recommended)", so a confirmed answer costs one tap. A fast turnaround is never a reason to skip: a wrong guess costs a rebuild, a question costs one tap. If `AskUserQuestion` is not available, ask in plain text and wait.
+
+Ask these, in this order:
+1. **Purpose and format.** Where will this be used, and in what size? This decides what you build. Options: a slide in a deck (1920 × 1080, what the builders draw), a page in an A4 brief or one-pager (1240 × 1754, see `references/collateral.md`), a social post or story, a web or email banner, or something else they name. Ask for the exact dimensions when they pick social, banner or other. The builders only draw 1920 × 1080 slides and the A4 recipe today. If the person needs another size, say so in one line, then offer to build the 1920 × 1080 slide and give them the Figma link to resize by hand, or to rebuild the layout by hand at their size.
+2. **Template**, unless they named one (step 2).
+3. **Logo** (step 2a).
+4. **Data basis**: raw or smoothed (name the window), the metric and source (for example DefiLlama base APY), the period and sampling, and for a line chart whether the axis starts at zero or is cut.
+5. **Emphasis** (step 2b), when the template supports it.
+
+Do not build until the answers are in. Record the purpose and size in the spec `name` or `note` so the next person knows what the frame is for.
+
 ### 1. Get the point and the data
 Find out three things: the numbers, what the slide should say (the finding), and where the numbers come from. If the person gave numbers without a finding, propose one in a sentence ("SOL staked grew every quarter, 7.3M to 18.2M") and let them correct it. If there is no source, ask; every Sanctum chart carries one. Never invent figures. If data is missing, ask for it rather than filling in.
 
